@@ -1,0 +1,14 @@
+div{
+	padding: 1%;
+	text-align: center;
+
+}
+div:first-child{
+	padding-top: 5%;
+}
+
+body{
+	background-color: black;
+	color:#fff;
+	font-size: 20px;
+}
