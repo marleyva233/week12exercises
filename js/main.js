@@ -23,61 +23,61 @@ function randomNumbers(){
 	randomNumberArray=[];
 //pushing random numbers to an array
 	for (var j=0; j<10; j++){
-	randomNumberArray.push(Math.floor(Math.random()*100)+1);
-	}
+	var randomNumber=Math.floor(Math.random()*100)+1;
+	if (randomNumberArray.indexOf(randomNumber)===-1){
+		randomNumberArray.push(randomNumber);}
+		}
 	document.getElementById("displayNumbers").innerHTML=randomNumberArray;
 
 }
 
 
-//next excercise is to work with date and time
-function displayDate(){
-	var myDate = new Date();
 
-	var currentSs=myDate.getSeconds();
-	if(currentSs<10){
-		currentSs="0"+currentSs;
-	}
+// //next excercise is to work with date and time
+// function displayDate(){
+// 	var myDate = new Date();
 
-
-	var currentHr=myDate.getHours();
-		currentHr=currentHr-12;
-	if (currentHr<10){
-		currentHr="0"+""+currentHr;
-	}
-	if (currentHr<12){
-		currentSs=currentSs+" pm";
-	}else{
-		currentSs=currentSs+" am";
-	}
+// 	var currentSs=myDate.getSeconds();
+// 	if(currentSs<10){
+// 		currentSs="0"+currentSs;
+// 	}
 
 
-	var currentMin=myDate.getMinutes();
-	if(currentMin<10){
-		currentMin="0"+""+currentMin;
-	}
+// 	var currentHr=myDate.getHours();
+// 		currentHr=currentHr-12;
+// 	if (currentHr<12){
+// 		currentSs=currentSs+" pm";
+// 	}else{
+// 		currentSs=currentSs+" am";
+// 	}
 
 
-	var time=currentHr+":"+currentMin+":"+currentSs;
+// 	var currentMin=myDate.getMinutes();
+// 	if(currentMin<10){
+// 		currentMin="0"+""+currentMin;
+// 	}
 
 
-	var currentYear=myDate.getFullYear();
-	var currentMonth=myDate.getMonth()+1;
-		if (currentMonth<10){
-			currentMonth="0"+currentMonth;
-		}
-	var currentDay=myDate.getDate();
+// 	var time=currentHr+":"+currentMin+":"+currentSs;
 
-	var date=currentDay+"/"+currentMonth+"/"+currentYear;
 
-	var displayArea=document.getElementById("displayArea");
-		displayArea.innerHTML=date +" "+ time;
+// 	var currentYear=myDate.getFullYear();
+// 	var currentMonth=myDate.getMonth()+1;
+// 		if (currentMonth<10){
+// 			currentMonth="0"+currentMonth;
+// 		}
+// 	var currentDay=myDate.getDate();
 
-setTimeout(function() {
-    displayDate();
-  }, 1000)
-}
-displayDate();
+// 	var date=currentDay+"/"+currentMonth+"/"+currentYear;
+
+// 	var displayArea=document.getElementById("displayArea");
+// 		displayArea.innerHTML=date +" "+ time;
+
+// setTimeout(function() {
+//     displayDate();
+//   }, 1000)
+// }
+// displayDate();
 
 
 
