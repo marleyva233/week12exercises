@@ -17,16 +17,15 @@ for (var i=0; i<myNumArray.length; i++){
 
 
 //an empty array 
-var randomNumberArray=[];
-
 function randomNumbers(){
-	randomNumberArray=[];
+	var randomNumberArray=[];
 //pushing random numbers to an array
-	for (var j=0; j<10; j++){
+	while(randomNumberArray.length<10)	{
 	var randomNumber=Math.floor(Math.random()*100)+1;
 	if (randomNumberArray.indexOf(randomNumber)===-1){
 		randomNumberArray.push(randomNumber);}
 		}
+		
 	document.getElementById("displayNumbers").innerHTML=randomNumberArray;
 
 }
